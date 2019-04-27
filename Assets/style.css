@@ -1,71 +1,71 @@
 
 .hero-full-screen {
-  height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: url("https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/chicago/01-city-landing/View-Of-Chicago-Oak-St-Beach-Lake-Michigan.jpg") center center no-repeat;
-  background-size: cover;
-}
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/chicago/01-city-landing/View-Of-Chicago-Oak-St-Beach-Lake-Michigan.jpg") center center no-repeat;
+    background-size: cover;
+  }
 
-h1{
-  font-family: 'Kite One', sans-serif;
-  font-size: 125px;
-}
-
-.hero-full-screen .middle-content-section {
-  text-align: center;
-  color: #fefefe;
-}
-
-.hero-full-screen .top-content-section {
-  width: 100%;
-}
-
-.hero-full-screen .bottom-content-section {
-  padding: 1rem;
-}
-
-.hero-full-screen .bottom-content-section svg {
-  height: 3.75rem;
-  width: 3.75rem;
-  fill: #fefefe;
-}
-
-.hero-full-screen .top-bar {
-  background: transparent;
-}
-
-.hero-full-screen .top-bar .menu {
-  background: transparent;
-}
-
-.hero-full-screen .top-bar .menu-text {
-  color: #fefefe;
-}
-
-.hero-full-screen .top-bar .menu li {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-full-screen .top-bar .menu a {
-  color: #fefefe;
-  font-weight: bold;
-}
+  h1{
+    font-family: 'Kite One', sans-serif;
+    font-size: 125px;
+  }
+  
+  .hero-full-screen .middle-content-section {
+    text-align: center;
+    color: #fefefe;
+  }
+  
+  .hero-full-screen .top-content-section {
+    width: 100%;
+  }
+  
+  .hero-full-screen .bottom-content-section {
+    padding: 1rem;
+  }
+  
+  .hero-full-screen .bottom-content-section svg {
+    height: 3.75rem;
+    width: 3.75rem;
+    fill: #fefefe;
+  }
+  
+  .hero-full-screen .top-bar {
+    background: transparent;
+  }
+  
+  .hero-full-screen .top-bar .menu {
+    background: transparent;
+  }
+  
+  .hero-full-screen .top-bar .menu-text {
+    color: #fefefe;
+  }
+  
+  .hero-full-screen .top-bar .menu li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .hero-full-screen .top-bar .menu a {
+    color: #fefefe;
+    font-weight: bold;
+  }
 
 
 .animated-search-form[type=search] {
@@ -86,68 +86,78 @@ h1{
 
 
 .menu-hover-lines {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: all 0.35s ease;
-}
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.35s ease;
+  }
+  
+  .menu-hover-lines li a {
+    padding: 0.75rem 0;
+    color: rgb(245, 239, 239);
+    position: relative;
+    margin-left: 1rem;
+  }
+  
+  .menu-hover-lines li:first-child a {
+    margin-left: 0;
+  }
+  
+  .menu-hover-lines li.active > a {
+    background-color: transparent;
+  }
+  
+  .menu-hover-lines a:before,
+  .menu-hover-lines a::after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    background-color: white;
+    width: 0;
+  }
+  
+  .menu-hover-lines a::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .menu-hover-lines a::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .menu-hover-lines a:hover,
+  .menu-hover-lines li.active > a {
+    color: white;
+    transition: all 0.35s ease;
+  }
+  
+  .menu-hover-lines a:hover::before,
+  .menu-hover-lines .active a::before,
+  .menu-hover-lines a:hover::after,
+  .menu-hover-lines .active a::after {
+    width: 100%;
+  }
 
-.menu-hover-lines li a {
-  padding: 0.75rem 0;
-  color: rgb(245, 239, 239);
-  position: relative;
-  margin-left: 1rem;
-}
 
-.menu-hover-lines li:first-child a {
-  margin-left: 0;
-}
-
-.menu-hover-lines li.active > a {
-  background-color: transparent;
-}
-
-.menu-hover-lines a:before,
-.menu-hover-lines a::after {
-  height: 3px;
-  position: absolute;
-  content: '';
-  transition: all 0.35s ease;
-  background-color: white;
-  width: 0;
-}
-
-.menu-hover-lines a::before {
-  top: 0;
-  left: 0;
-}
-
-.menu-hover-lines a::after {
-  bottom: 0;
-  right: 0;
-}
-
-.menu-hover-lines a:hover,
-.menu-hover-lines li.active > a {
-  color: white;
-  transition: all 0.35s ease;
-}
-
-.menu-hover-lines a:hover::before,
-.menu-hover-lines .active a::before,
-.menu-hover-lines a:hover::after,
-.menu-hover-lines .active a::after {
-  width: 100%;
-}
+  #main-content-section{
+    margin-right: 25px;
 
 
-#main-content-section{
-  margin-right: 25px;
+
+  }
+
+
+  .card{
+    bottom: 0;
+    left: 0;
+  }
   
 
 
-}
+
 
 
 .card{
@@ -158,146 +168,135 @@ h1{
 
 
 .featured-image-block-grid-header {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.featured-image-block {
-  margin-bottom: 20px;
-}
-
-.featured-image-block .featured-image-block-title {
-  font-weight: 600;
-  margin-top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1em;
-  color: #404040;
-}
-
-.featured-image-block a:hover p {
-  color: #1779ba;
-}
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .featured-image-block {
+    margin-bottom: 20px;
+  }
+  
+  .featured-image-block .featured-image-block-title {
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: #404040;
+  }
+  
+  .featured-image-block a:hover p {
+    color: #1779ba;
+  }
 
 
 .card-tabs .card-divider {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 15px 20px;
-}
-
-.card-tabs .card-divider h1, .card-tabs .card-divider h2, .card-tabs .card-divider h3, .card-tabs .card-divider h4, .card-tabs .card-divider h5, .card-tabs .card-divider h6 {
-  margin-bottom: 0;
-}
-
-.card-tabs .card-divider .fa {
-  position: relative;
-  margin-right: 0;
-}
-
-.card-tabs .tabs {
-  padding-top: 4px;
-}
-
-.card-tabs .tabs,
-.card-tabs .tabs a {
-  background: none;
-}
-
-.card-tabs .tabs a {
-  padding: 0;
-  margin: 0 10px;
-  font-size: 13px;
-  color: #8a8a8a;
-}
-
-.card-tabs .tabs a:hover,
-.card-tabs .tabs .is-active a {
-  color: #0a0a0a;
-}
-
-.card-tabs .tabs-panel {
-  padding: 0;
-}
-
-
-.flip-card {
-  background-color: transparent;
-  width: 500px;
-  height: 400px;
-  margin-left: auto;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.caption h3 {
-  position: absolute;
-  bottom: 25px;
-  padding: 10px;
-  text-align: center;
-  color:#fff;
-  background: #2c3e50;
-  opacity:.8;
-  font-family: 'Kite One', sans-serif;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px 20px;
+  }
   
-}
+  .card-tabs .card-divider h1, .card-tabs .card-divider h2, .card-tabs .card-divider h3, .card-tabs .card-divider h4, .card-tabs .card-divider h5, .card-tabs .card-divider h6 {
+    margin-bottom: 0;
+  }
+  
+  .card-tabs .card-divider .fa {
+    position: relative;
+    margin-right: 0;
+  }
+  
+  .card-tabs .tabs {
+    padding-top: 4px;
+  }
+  
+  .card-tabs .tabs,
+  .card-tabs .tabs a {
+    background: none;
+  }
+  
+  .card-tabs .tabs a {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 13px;
+    color: #8a8a8a;
+  }
+  
+  .card-tabs .tabs a:hover,
+  .card-tabs .tabs .is-active a {
+    color: #0a0a0a;
+  }
+  
+  .card-tabs .tabs-panel {
+    padding: 0;
+  }
+  
+  
+  .flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+    margin-left: auto;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .caption h3 {
+    position: absolute;
+    bottom: 25px;
+    padding: 10px;
+    text-align: center;
+    color:#fff;
+    background: #2c3e50;
+    opacity:.8;
+    font-family: 'Kite One', sans-serif;
+    
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
 
 
 
