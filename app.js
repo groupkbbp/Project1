@@ -90,13 +90,3 @@ $('.flip-card').on('click', function () {
 
 
 
-
-
-//working example
-//https://data.cityofchicago.org/resource/k7hf-8y75.json?$where=measurement_timestamp between '2018-04-10T09:00:00.000' and '2018-04-23T00:00.000'
-
-//?$where=date between '2015-01-10T12:00:00' and '2015-01-10T14:00:00'
-
-// https://data.cityofchicago.org/resource/t62e-8nvc.json?date=2016-06-04T00:00:00.000    initial working code
-// https://data.cityofchicago.org/resource/t62e-8nvc.json?date=2016-06-04    works without the exact time
-// https://data.cityofchicago.org/resource/t62e-8nvc.json?swim_advisory=N
