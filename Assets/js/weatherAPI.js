@@ -20,7 +20,7 @@ var beachLocations = [
     }
 ];
 
-var beachSelected = $("#beachSelected").val()
+var beachSelected = $("#beachSelected").attr("id")
 
 $('#send').on('click', function () {
 
