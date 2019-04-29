@@ -55,10 +55,10 @@ $('.flip-card').on('click', function () {
     }
   }).done(function (data) {
     if (data.length == 0) {
-      $('#watercond').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
+      $('#watercond2').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
       console.log('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.')
       var noResults = $('<div>').text('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.');
-      $('#watercond').append(noResults);
+      $('#watercond2').append(noResults);
       
 
     }
