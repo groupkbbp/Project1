@@ -17,6 +17,16 @@
 // console.log(beachName)
 // var date = "date=2016-06-04"; //based on current day
 
+var beachArray = [
+  {
+    beachId: 1,
+    value: 'OakStreet',
+    swimmable: false
+  }
+]
+//if (swimmable == false)
+
+
 function checkBeach(data) {
   for (var i = 0; i < data.length; i++) {
     console.log(data[i].beach_name) // shows the name of the results pulled
@@ -46,7 +56,7 @@ $('.flip-card').on('click', function () {
   var date = '';  // ***** WRITE CODE FOR DETERMINING CURRENT DATE.... momentjs?
   $.ajax({
     // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json?swim_advisory=Y",
-    // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+date,
+    // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+date,  //for proper date otherwise error msg
     url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+test_date,
     type: "GET",
     data: {
@@ -67,6 +77,7 @@ $('.flip-card').on('click', function () {
     }
     alert("Retrieved " + data.length + " records from the dataset!");
     console.log('data', data);
+    
 
    
 
@@ -80,6 +91,9 @@ $('.flip-card').on('click', function () {
  /////// how to empty out each individual div on click and not all of them
     
     //? set a class to item being clicked then use this to dtermine the ID of item being clicked and clear the div of said box
+
+    //set attr of deafult to be red
+      // when if statement checks and sees that it works 
 
 
    // $(this).on('click, function'){

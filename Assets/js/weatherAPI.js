@@ -24,7 +24,8 @@ var beachLocations = [
         beach: "Oak Street",
         id:"XXXXX",
         lat: 41.9030,
-        lon: 87.6228
+        lon: 87.6228,
+        BeachId: 1
     },
     {
         beach: "North Ave",
