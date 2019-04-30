@@ -25,21 +25,18 @@
 
   <div class="hero-full-screen">
 
-    <div class="top-content-section">
+    <div class="header-content-section">
 
-      <ul class="menu menu-hover-lines">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Beaches</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#">Transit</a></li>
-        <li><a href="#">Maps</a></li>
-      </ul>
+
+
 
     </div>
 
+
+
     <div class="middle-content-section">
       <h1>Basic Beaches</h1>
-      <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+     
     </div>
 
     <div class="bottom-content-section" data-magellan data-threshold="0">
@@ -47,7 +44,7 @@
           viewBox="0 0 24 24">
           <path
             d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
-          </svg></a>
+        </svg></a>
     </div>
 
   </div>
@@ -56,7 +53,7 @@
 
     <!-- ROW 1---->
     <div class="row w-100" style="max-width:100rem">
-      <div class="col-sm-4">
+      <div class="col-4">
         <div class="flip-card" onclick="flip()" id="beach-2">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -97,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-4">
         <div class="flip-card" onclick="flip()" id="beach-2" value="OakStreet">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -143,14 +140,106 @@
           allowfullscreen></iframe>
       </div>
     </div>
-  </div>
+        <div class="card-button-div">
 
-  <!-- Sources -->
+           <a class="button small medium-down-expanded" href="#">Add More Beaches!</a>
+           
+        </div>
 
-  <script src="/Assets/js/weatherAPI.js"></script>
-  <script src="/Assets/js/flipcards.js"></script>
-  <script src="/app.js"></script>
+    <!-- Second Row of cards-->
+
+    <div class="row w-100" style="max-width:100rem">
+      <div class="col-4">
+        <div class="flip-card" onclick="flip()" id="beach-2">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://s3-media2.fl.yelpcdn.com/bphoto/DE_U5gd5KFuy-mfPULdAyg/348s.jpg" alt="Avatar"
+                style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>Ohio Street Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond1">Condition of water</div>
+              <div class="weather" id="weather-ohio" value="beach-conditions" style="width:400px;height:100px;">
+                <script type='text/javascript'
+                  src='https://darksky.net/widget/graph-bar/41.8935,-87.6128/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+                >
+              </div>
+              <div class="maps" id="maps-oak" style="width:400px;height:100px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" onclick="flip()" id="beach-2">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://media.timeout.com/images/100908005/630/472/image.jpg" class="img-fluid" alt="Avatar"
+                style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>Foster Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond3">Condition of water</div>
+              <div class="weather" id="weather-foster" value="beach-conditions" style="width:400px;height:100px;">
+                <script type='text/javascript'
+                  src='https://darksky.net/widget/graph-bar/41.9786,-87.6496/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="flip-card" onclick="flip()" id="beach-2">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://i.pinimg.com/originals/64/58/9e/64589edff02911c46b5a47a612291cbc.jpg" alt="Avatar"
+                style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>Hollywood Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond1">Condition of water</div>
+              <div class="weather" id="weather-hollywood" value="beach-conditions" style="width:400px;height:100px;">
+                <script type='text/javascript'
+                  src='https://darksky.net/widget/graph-bar/41.9876,-87.6532/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+              </div>
+              <div class="maps" id="maps-oak" style="width:400px;height:100px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" onclick="flip()" id="beach-2">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://Chicago.simpleviewcrm.com/images/listings/original_5569_63_BH_18.JPG"
+                class="img-fluid" alt="Avatar" style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>63 Street Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond3">Condition of water</div>
+              <div class="weather" id="weather-63" value="beach-conditions" style="width:400px;height:100px;">
+                <script type='text/javascript'
+                  src='https://darksky.net/widget/graph-bar/41.7812,-87.5759/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sources -->
+
+    <script src="/Assets/js/weatherAPI.js"></script>
+    <script src="/Assets/js/flipcards.js"></script>
+    <script src="/app.js"></script>
 
 
 </body>
+
 </html>
