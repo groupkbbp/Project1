@@ -19,12 +19,39 @@
 
 // var beachArray = [
 //   {
+<<<<<<< HEAD
 //     beachId: 3,
 //     value: 'OakStreet',
 //     swimmable: false
 //   }
 // ]
 //if (swimmable == false)
+=======
+//     beachId: 1,
+//     value: 'Montrose',
+//   },
+//   {
+//     beachId: 2,
+//     value: 'OakStreet',
+//   },
+//   {
+//     beachId: 3,
+//     value: 'NorthAvenue',
+//   },
+//   {
+//     beachId: 4,
+//     value: '12thStreet',
+//   }
+// ]
+
+// for(var i=0; i<beachArray.length, i++;){
+      // if(beachArray[i].value == this.val){
+        //var waterNumber = $('#watercond'+beachArray[i].beachId);
+      //}
+      //   console.log('watercond',this)
+
+
+>>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
 
 
 function checkBeach(data) {
@@ -37,7 +64,11 @@ function checkBeach(data) {
     if (predLevel > 235) {
       console.log('ITS NOT SAFE TO SWIM DAWG!')
       var safetyNo = $('<div>').text('DONT SWIM DAWG');
+<<<<<<< HEAD
       $('#watercond'+beachId).append(safetyNo);
+=======
+      $('#watercond').append(safetyNo);     // USE waterNumber 
+>>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
       
 
       //*****append to a div on card saying its not safe to swim
@@ -50,6 +81,7 @@ function checkBeach(data) {
     }
   }
 }
+<<<<<<< HEAD
 // $('.flip').click(function(){
 //   $(this).find('.card').toggleClass('flipped');
 //   if ($(this).find('.card').hasClass("flipped")){
@@ -63,6 +95,11 @@ function checkBeach(data) {
 $('.flip').on('click', function () {
   var beachName ='?beach_name='+ $(this).attr("data-beach-name");
   
+=======
+
+$('button').on('click', function () {
+  var beachName ='?beach_name='+ $(this).val();
+>>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
   console.log('this: ',beachName);
   var test_date = "date=2016-06-04";
   var date = '';  // ***** WRITE CODE FOR DETERMINING CURRENT DATE.... momentjs?
@@ -72,19 +109,28 @@ $('.flip').on('click', function () {
     url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+test_date,
     type: "GET",
     data: {
-      "$limit": 10,
+      "$limit": 1,
       "$$app_token": 'y2iq7CNOLDfDnmu2uLY9uDQ9l'
     }
   }).done(function (data) {
     if (data.length == 0) {
+<<<<<<< HEAD
       $('#watercond'+beachId).empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
       console.log('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.')
       var noResults = $('<div>').text('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.');
       $('#watercond'+beachId).append(noResults);
+=======
+      $('#watercond').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
+      console.log('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.')
+      var noResults = $('<div>').text('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.');
+      $('#watercond').append(noResults);
+>>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
       
 
     }
     else{
+      
+      // }
       checkBeach(data);
     }
     alert("Retrieved " + data.length + " records from the dataset!");
