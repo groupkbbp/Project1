@@ -17,14 +17,32 @@
 // console.log(beachName)
 // var date = "date=2016-06-04"; //based on current day
 
-var beachArray = [
-  {
-    beachId: 1,
-    value: 'OakStreet',
-    swimmable: false
-  }
-]
-//if (swimmable == false)
+// var beachArray = [
+//   {
+//     beachId: 1,
+//     value: 'Montrose',
+//   },
+//   {
+//     beachId: 2,
+//     value: 'OakStreet',
+//   },
+//   {
+//     beachId: 3,
+//     value: 'NorthAvenue',
+//   },
+//   {
+//     beachId: 4,
+//     value: '12thStreet',
+//   }
+// ]
+
+// for(var i=0; i<beachArray.length, i++;){
+      // if(beachArray[i].value == this.val){
+        //var waterNumber = $('#watercond'+beachArray[i].beachId);
+      //}
+      //   console.log('watercond',this)
+
+
 
 
 function checkBeach(data) {
@@ -35,7 +53,7 @@ function checkBeach(data) {
     if (predLevel > 235) {
       console.log('ITS NOT SAFE TO SWIM DAWG!')
       var safetyNo = $('<div>').text('DONT SWIM DAWG');
-      $('#watercond').append(safetyNo);
+      $('#watercond').append(safetyNo);     // USE waterNumber 
       
 
       //*****append to a div on card saying its not safe to swim
@@ -49,7 +67,7 @@ function checkBeach(data) {
   }
 }
 
-$('.flip-card').on('click', function () {
+$('button').on('click', function () {
   var beachName ='?beach_name='+ $(this).val();
   console.log('this: ',beachName);
   var test_date = "date=2016-06-04";
@@ -60,19 +78,21 @@ $('.flip-card').on('click', function () {
     url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+test_date,
     type: "GET",
     data: {
-      "$limit": 10,
+      "$limit": 1,
       "$$app_token": 'y2iq7CNOLDfDnmu2uLY9uDQ9l'
     }
   }).done(function (data) {
     if (data.length == 0) {
-      $('#watercond2').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
+      $('#watercond').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
       console.log('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.')
       var noResults = $('<div>').text('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.');
-      $('#watercond2').append(noResults);
+      $('#watercond').append(noResults);
       
 
     }
     else{
+      
+      // }
       checkBeach(data);
     }
     alert("Retrieved " + data.length + " records from the dataset!");
