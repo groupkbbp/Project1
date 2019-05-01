@@ -17,13 +17,13 @@
 // console.log(beachName)
 // var date = "date=2016-06-04"; //based on current day
 
-var beachArray = [
-  {
-    beachId: 1,
-    value: 'OakStreet',
-    swimmable: false
-  }
-]
+// var beachArray = [
+//   {
+//     beachId: 3,
+//     value: 'OakStreet',
+//     swimmable: false
+//   }
+// ]
 //if (swimmable == false)
 
 
@@ -31,11 +31,13 @@ function checkBeach(data) {
   for (var i = 0; i < data.length; i++) {
     console.log(data[i].beach_name) // shows the name of the results pulled
     var predLevel = data[i].predicted_level
+    var beachId = $(this).attr("data-beach-id");  
+    console.log('beachId: ',beachId)
     console.log('predLevel: ',predLevel)
     if (predLevel > 235) {
       console.log('ITS NOT SAFE TO SWIM DAWG!')
       var safetyNo = $('<div>').text('DONT SWIM DAWG');
-      $('#watercond').append(safetyNo);
+      $('#watercond'+beachId).append(safetyNo);
       
 
       //*****append to a div on card saying its not safe to swim
@@ -43,14 +45,24 @@ function checkBeach(data) {
     else{
       console.log('its OKAY to swim dawg')
       var safetyYes = $('<div>').text('SWIM YA LIL FISHY');
-      $('#watercond').append(safetyYes);
+      $('#watercond'+beachId).append(safetyYes);
       //******append to div on card saying OK to swim
     }
   }
 }
+// $('.flip').click(function(){
+//   $(this).find('.card').toggleClass('flipped');
+//   if ($(this).find('.card').hasClass("flipped")){
+//     // updateinfo
+//     var beachId = $(this).attr("data-beach-id");
+//     var beachName = $(this).attr("data-beach-name");
+ 
+//   }
+//  });
 
-$('.flip-card').on('click', function () {
-  var beachName ='?beach_name='+ $(this).val();
+$('.flip').on('click', function () {
+  var beachName ='?beach_name='+ $(this).attr("data-beach-name");
+  
   console.log('this: ',beachName);
   var test_date = "date=2016-06-04";
   var date = '';  // ***** WRITE CODE FOR DETERMINING CURRENT DATE.... momentjs?
@@ -60,19 +72,21 @@ $('.flip-card').on('click', function () {
     url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+test_date,
     type: "GET",
     data: {
-      "$limit": 10,
+      "$limit": 1,
       "$$app_token": 'y2iq7CNOLDfDnmu2uLY9uDQ9l'
     }
   }).done(function (data) {
     if (data.length == 0) {
-      $('#watercond2').empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
+      $('#watercond'+beachId).empty();  //***** DETERMINE WHICH BUTTON WAS PRESSED AND EMPTY RIGHT DIV
       console.log('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.')
       var noResults = $('<div>').text('No values exist for the current date. The sensors will only be monitoring from Memorial Day to Labor Day each year.');
-      $('#watercond2').append(noResults);
+      $('#watercond'+beachId).append(noResults);
       
 
     }
     else{
+      
+      // }
       checkBeach(data);
     }
     alert("Retrieved " + data.length + " records from the dataset!");
