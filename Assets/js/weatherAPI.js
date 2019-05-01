@@ -1,4 +1,3 @@
-
 var widget = "https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true"
 
 $('.test2').on('click',function () {
@@ -96,5 +95,6 @@ var beachLocations = [
 
 
   
+
 
 

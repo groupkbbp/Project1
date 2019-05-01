@@ -7,3 +7,4 @@ $('.flip-card').click(function(){
     
   }
 });
+

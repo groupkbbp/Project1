@@ -7,11 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Kite+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
   <link rel="stylesheet" href="Assets/style.css">
@@ -25,36 +24,35 @@
 
   <div class="hero-full-screen">
 
-    <div class="header-content-section">
+   <div class="top-content-section">
 
-
-
+      <ul class="menu menu-hover-lines">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Beaches</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#">Transit</a></li>
+        <li><a href="#">Maps</a></li>
+      </ul>
 
     </div>
-
-
 
     <div class="middle-content-section">
       <h1>Basic Beaches</h1>
-     
+      <input type="search" name="search" placeholder="Search.." class="animated-search-form">
     </div>
 
     <div class="bottom-content-section" data-magellan data-threshold="0">
-      <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24">
-          <path
-            d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
-        </svg></a>
-    </div>
+      <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" /></svg></a>
+    </div> 
 
   </div>
 
-  <div class="container-flow" id="main-content-section" data-magellan-target="main-content-section" style="width:100%">
+  <div class="container-fluid" id="main-content-section" data-magellan-target="main-content-section" style="width:100%">
 
     <!-- ROW 1---->
-    <div class="row w-100" style="max-width:100rem">
+    <div class="row w-100" style="max-width:100rem" >
       <div class="col-4">
-<<<<<<< HEAD
           <div class="flip-card" data-beach-id="1" data-beach-name="Montrose">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -66,28 +64,12 @@
                 </div>
                 <div class="flip-card-back">
                     <div id="watercond1">Condition of water</div>
-=======
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img
-                src="https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/HWdNSxjEzjch3hjal/storyblocks-beautiful-bright-saturated-and-vivid-sunset-with-colorful-orange-yellow-blue-pink-and-purple-clouds-in-the-sky-above-reflecting-on-rain-puddles-in-the-sand-at-montrose-beach-in-chicago-illinois_SGVF1Pag7_thumb.jpg"
-                alt="Avatar" style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>Montrose Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond1">Condition of water</div>
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
               <div class="weather" id="weather-montrose" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.9636,-87.7476/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
+                <script type='text/javascript' src='https://darksky.net/widget/graph-bar/41.9636,-87.7476/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
               </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
 
             <div class="flip-card" data-beach-id="2" data-beach-name="NorthAvenue">
@@ -155,121 +137,34 @@
             <iframe width="500" height="1000" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Chicago%20Beachers&key=AIzaSyDQUzAUZX_8MqKnkg5Ejiw-yWaRW3WoP9k"
               allowfullscreen></iframe>
         </div>
-=======
-          </div>
-        </div>
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://windycitybeaches.weebly.com/uploads/7/0/8/1/7081676/3185026_orig.jpg" class="img-fluid"
-                alt="Avatar" style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>North Avenue Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond3">Condition of water</div>
-              <div class="weather" id="weather-oak" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.9185,-87.628/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="col-4">
-        <div class="flip-card" onclick="flip()" id="beach-2" value="OakStreet">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="http://www.citylightsrentals.com/wp-content/uploads/Neighborhoods/Oak-St-Beach2-500X400.jpg"
-                alt="Avatar" style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>Oak Street Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond2">Condition of water</div>
-              <div class="weather" id="weather-oak" value="OakStreet" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.9029,-87.6227/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img class="img-fluid"
-                src="data:image/jpeg;base64,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"
-                alt="Avatar" style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>12th Street Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond4">Condition of water</div>
-              <div class="weather" id="weather-12" value="beach-conditions" style="width:400px;height:100px;">
-                <script id="tester" type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-              </div>
-            </div>
-          </div>
-        </div>
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
       </div>
+     
+     
+
+    <!--Maps Section -->
+
+
+
+    <!-- ROW 2---->
+    <!-- <div class="row" style="max-width:100rem">
       <div class="col-4">
-        <!--Maps Section -->
-        <iframe width="500" height="1000" frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/search?q=Chicago%20Beachers&key=AIzaSyDQUzAUZX_8MqKnkg5Ejiw-yWaRW3WoP9k"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-        <div class="card-button-div">
-
-           <a class="button small medium-down-expanded" href="#">Add More Beaches!</a>
-           
-        </div>
-
-    <!-- Second Row of cards-->
-
-    <div class="row w-100" style="max-width:100rem">
-      <div class="col-4">
-<<<<<<< HEAD
         <div class="flip" onclick="flip()" id="beach-2">
           <div class="card">
             <div class="face front">
               <img src="https://windycitybeaches.weebly.com/uploads/7/0/8/1/7081676/3185026_orig.jpg" class="img-fluid"
                 alt="Avatar" style="width:500px;height:400px;">
-=======
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://s3-media2.fl.yelpcdn.com/bphoto/DE_U5gd5KFuy-mfPULdAyg/348s.jpg" alt="Avatar"
-                style="width:400px;height:400px;">
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
               <div class="caption" id="beach2">
-                <h3>Ohio Street Beach</h3>
+                <h3>North Avenue Beach</h3>
               </div>
             </div>
-<<<<<<< HEAD
             <div class="face back">
               <div class="weather" id="weather-oak" value="beach-conditions" style="width:500px;height:200px;">
                 <script type='text/javascript' src='https://darksky.net/widget/graph-bar/41.9185,-87.628/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-=======
-            <div class="flip-card-back">
-              <div id="watercond1">Condition of water</div>
-              <div class="weather" id="weather-ohio" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.8935,-87.6128/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-                >
-              </div>
-              <div class="maps" id="maps-oak" style="width:400px;height:100px;">
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div> -->
       <!-- <div class="col-4">
         <div class="flip"onclick="flip()" id="beach-2">
@@ -277,102 +172,35 @@
             <div class="face front">
               <img class="img-fluid" src="data:image/jpeg;base64,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"
                 alt="Avatar" style="width:500px;height:400px;">
-=======
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://media.timeout.com/images/100908005/630/472/image.jpg" class="img-fluid" alt="Avatar"
-                style="width:400px;height:400px;">
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
               <div class="caption" id="beach2">
-                <h3>Foster Beach</h3>
+                <h3>12th Street Beach</h3>
               </div>
             </div>
-<<<<<<< HEAD
             <div class="face back">
               <div class="weather" id="weather-12" value="beach-conditions" style="width:500px;height:200px;">
                 <script id="tester" type='text/javascript' src='https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-=======
-            <div class="flip-card-back">
-              <div id="watercond3">Condition of water</div>
-              <div class="weather" id="weather-foster" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.9786,-87.6496/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://i.pinimg.com/originals/64/58/9e/64589edff02911c46b5a47a612291cbc.jpg" alt="Avatar"
-                style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>Hollywood Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond1">Condition of water</div>
-              <div class="weather" id="weather-hollywood" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.9876,-87.6532/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
-              </div>
-              <div class="maps" id="maps-oak" style="width:400px;height:100px;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flip-card" onclick="flip()" id="beach-2">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img
-                src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://Chicago.simpleviewcrm.com/images/listings/original_5569_63_BH_18.JPG"
-                class="img-fluid" alt="Avatar" style="width:400px;height:400px;">
-              <div class="caption" id="beach2">
-                <h3>63 Street Beach</h3>
-              </div>
-            </div>
-            <div class="flip-card-back">
-              <div id="watercond3">Condition of water</div>
-              <div class="weather" id="weather-63" value="beach-conditions" style="width:400px;height:100px;">
-                <script type='text/javascript'
-                  src='https://darksky.net/widget/graph-bar/41.7812,-87.5759/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'></script>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div> -->
 
-    <!-- Sources -->
+  <!-- map section -->
+  <div class="contatiner-fluid">
+    <div class="row">
+      <div class="col-sm-12">
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
+      </div>
+    </div>
 
 
 
-
-
-
-
-
-
-
-    
-=======
->>>>>>> 95197fca90ab80433bc2c037492c27f45bc1e097
     <script src="/Assets/js/weatherAPI.js"></script>
     <script src="/Assets/js/flipcards.js"></script>
     <script src="/app.js"></script>
+
 
 
 </body>
