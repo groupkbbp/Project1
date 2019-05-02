@@ -54,10 +54,8 @@ $('.flip-card').on('click', function () {
   //****  MAKE 1 RESULT WITH A UNSAFE TO SWIM DATE
   $.ajax({
     // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json?swim_advisory=Y",
-    // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+date,  //for proper date otherwise error msg
+    // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+date,     //for when sensors come on
     url: "https://data.cityofchicago.org/resource/t62e-8nvc.json" + beachName + '&' + test_date,
-    // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json",
-    // ?beach_name=OhioStreetBeach",
     type: "GET",
     data: {
       "$limit": 1,
@@ -79,13 +77,11 @@ $('.flip-card').on('click', function () {
 
         if (predLevel > 235) { //will be red 
           $('#watercond' + beachId).empty();
-          console.log('ITS NOT SAFE TO SWIM DAWG!');
           var safetyNo = $('<div>').addClass("divclass2").text('UNSAFE TO SWIM');
           $('#watercond' + beachId).append(safetyNo);
         }
         else { // green
           $('#watercond' + beachId).empty();
-          console.log('its OKAY to swim dawg');
           var safetyYes = $('<div>').addClass("divclass").text('SAFE TO SWIM');
           $('#watercond' + beachId).append(safetyYes);
         }
