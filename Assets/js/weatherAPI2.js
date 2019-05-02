@@ -76,13 +76,13 @@ var beachIDs = [
     }
 ];
 
-    var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 41.9019772, lng: -87.6222749 },
-                zoom: 15
-            });
-        };
+    // var map;
+    //     function initMap() {
+    //         map = new google.maps.Map(document.getElementById('map'), {
+    //             center: { lat: 41.9019772, lng: -87.6222749 },
+    //             zoom: 15
+    //         });
+    //     };
 
 
 $(".flip-card").on("click", function () {
@@ -98,17 +98,18 @@ $(".flip-card").on("click", function () {
         if (values[i].dataBeachName == currentBeach) {
           
             var locationQueryString = values[i].locationQuery;
-           
+           console.log(locationQueryString);
             //Dark Sky API Call with Selected Beach
+           
             $.ajax({
-               // url: "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/4a4040a2a6849005fa4c1146c74f1d8f/" + locationQueryString,
+               url: "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/4a4040a2a6849005fa4c1146c74f1d8f/" + locationQueryString,
                 method: "GET",
             })
                 .then(function (response) {
                     console.log(response);
-                   var results = response.data;
+                   var results = response;
                    console.log("test" + results.currently.apparentTemperature)
-                   $("#weatherMontrose").text(results.currently.apparentTemperature);
+                   $("#weather"+currentBeach).text(results.currently.apparentTemperature);
                 })
             
         } else {
@@ -117,13 +118,6 @@ $(".flip-card").on("click", function () {
     }
 });
 
-
- // //Beach Dropdown Selection
-    // var event = document.getElementById("beachSelect");
-    // var selection = event.options[event.selectedIndex].value;
-    // document.getElementById("beachDisplay").innerHTML = selection;
-    // console.log("selection: " + selection)
-
     // var map;
 //         function initMap() {
 //             map = new google.maps.Map(document.getElementById('map'), {
@@ -131,3 +125,16 @@ $(".flip-card").on("click", function () {
 //                 zoom: 15
 //             });
 //         };
+
+// .done(function(data) {
+//     setTimeout(() => {
+//       $('.status').text(JSON.stringify(data));
+//     }, 2000);
+//     console.log('success callback 1', data)
+//   })
+//   .fail(function(xhr) {
+//     console.log('error callback 1', xhr);
+//   });
+// }
+
+// getData();

@@ -26,7 +26,7 @@
 //       console.log('ITS NOT SAFE TO SWIM DAWG!')
 //       var safetyNo = $('<div>').text('DONT SWIM DAWG');
 //       $('#watercond'+beachId).append(safetyNo);
-      
+
 //       //*****append to a div on card saying its not safe to swim
 //     }
 //     else{
@@ -39,19 +39,19 @@
 // }
 
 $('.flip-card').on('click', function () {
-  console.log('this' + this)
+ // console.log('this' + this)
   var beachName = '?beach_name=' + $(this).attr("data-beach-name");
   var beachId = $(this).attr('data-beach-id');
-  console.log('beachId', beachId)
-  console.log('beachName: ', beachName);
+  //console.log('beachId', beachId)
+  //console.log('beachName: ', beachName);
   var test_date = "date=2016-06-04";
   //https://data.cityofchicago.org/resource/t62e-8nvc.json?date=2016-06-04T00:00:00.000
   var now = moment().format('YYYY-MM-DD');
-  var date = 'date='+now
-  
-  
+  var date = 'date=' + now
+
+
   // console.log(date)
-//****  MAKE 1 RESULT WITH A UNSAFE TO SWIM DATE
+  //****  MAKE 1 RESULT WITH A UNSAFE TO SWIM DATE
   $.ajax({
     // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json?swim_advisory=Y",
     // url: "https://data.cityofchicago.org/resource/t62e-8nvc.json"+beachName+'&'+date,  //for proper date otherwise error msg
@@ -74,8 +74,8 @@ $('.flip-card').on('click', function () {
       for (var i = 0; i < data.length; i++) {
         console.log(data[i].beach_name)
         var predLevel = data[i].predicted_level
-        console.log('beachId2: ', beachId)
-        console.log('predLevel: ', predLevel)
+       // console.log('beachId2: ', beachId)
+       // console.log('predLevel: ', predLevel)
 
         if (predLevel > 235) { //will be red 
           $('#watercond' + beachId).empty();
