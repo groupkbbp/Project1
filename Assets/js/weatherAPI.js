@@ -1,29 +1,6 @@
-<<<<<<< HEAD
 //Array of Beach Objects
+
 var beachIDs = [
-=======
-var widget = "https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true"
-
-$('.test2').on('click',function () {
-var buttonAdd= $("<button>")
-   $(this).val("YESSS")
-    // var state = $(tester).attr("data-state");
-    // console.log(state)
-    // if (state == "hide") {
-    //     $(tester).attr("src", $(tester).attr(widget))
-    //     $(tester).attr("data-state", "show")
-    // } else {
-    //     $(tester).attr("src", $(tester).attr("#"))
-    //     $(tester).attr("data-state", "hide")
-    // }
-});
-
-
-//var apiKEY = "5af5afe42af981e26b5ba776c7767b41";
-var lat = 41.881832;
-var lon = -87.623177;
-var beachLocations = [
->>>>>>> 00d26a790da7236a29e5d6f5acd7b84c52550bb9
     {
         beach: "Oak Street",
         foodQuery: "restaurants%20near%20Oak%20Street%20Beach%2C%20Chicago%2C%20Illinois%2C%20USA",
@@ -31,7 +8,7 @@ var beachLocations = [
         locationQuery: "41.9019772,-87.6222749"
     },
     {
-        beach: "North Ave",
+        beach: "North Avenue",
         foodQuery: "restaurants%20near%20North%20Avenue%20Beach%2C%20Chicago%2C%20Illinois%2C%20USA",
         beachQuery: "place_id:ChIJDw9m7GbTD4gRfxvHEJFgLBs",
         locationQuery: "41.9141994,-87.6244975"
@@ -75,15 +52,11 @@ var beachLocations = [
 ];
 
 // Onclick Event
-$("button").on("click", function () {
+$(".flip-card").on("click", function () {
     //can use this for cards
-    console.log(this.id)
+    console.log("this on! ", $(this).attr("data-beach-id"));
 
-    //Beach Dropdown Selection
-    var e = document.getElementById("beachSelect");
-    var selection = e.options[e.selectedIndex].value;
-    document.getElementById("beachDisplay").innerHTML = selection;
-
+    var selection = "North Avenue"
     //Loop through Array
     var values = Object.values(beachIDs);
     console.log(values);
@@ -107,7 +80,7 @@ $("button").on("click", function () {
             console.log("BM: " + beachMap);
            
             //Select Parent Container
-            var parent = $(".parent");
+            var parent = $(".map");
             
             //Google Map API Add
             var child = $("<iframe>").attr("width", "500").attr("height", "1000").attr("style", "border:0").attr("src", beachMap);
@@ -117,10 +90,10 @@ $("button").on("click", function () {
             //var child2 = $("<script>").attr("width", "500").attr("height", "1000").attr("style", "border:0").attr("src", beachWeather); 
            
             parent.empty();
-            parent.append(child2,child);
+            parent.append(child);
         }
     }
-});
+})
 
 
 
