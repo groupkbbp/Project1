@@ -12,7 +12,7 @@ var config = {
   var database = firebase.database();
   var clickCounter = 0;
 
-  $(".flip-card").on("click", function() {
+  $(".flip-card-front").on("click", function() {
     clickCounter++;
 
     database.ref().set({
