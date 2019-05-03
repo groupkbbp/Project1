@@ -23,9 +23,11 @@
     <style>
         .flip-card {
             width: 100%;
+            margin: 1%;
         }
-        .img-fluid{
-            width:100%;
+
+        .img-fluid {
+            width: 100%;
             height: 100%;
         }
     </style>
@@ -47,15 +49,29 @@
                 </svg></a>
         </div>
     </div>
-
+    <!-- Main contenter Header -->
+    <div class="container">
+        <br>
+        <h2>Ready to go?</h2>
+        <h5>Select you favorite beach for details.</h5>
+    </div>
+    <ul class="nav nav-pills">
+        <li class="nav-itme">
+                <a class="nav-link" href="#">Most Popular</a>
+        </li>
+        <li class="nav-itme">
+                <a class="nav-link" href="#">Best Conditions</a>
+        </li>
+    </ul>
+    
     <!-- BEACH 1---->
-    <div class="row center-xs" style="max-width: 100%; margin: 1%">
+    <div class="row center-xs" style="max-width: 100%">
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
             <div class="flip-card" data-toggle="front" data-beach-id="1" data-beach-name="Montrose">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/HWdNSxjEzjch3hjal/storyblocks-beautiful-bright-saturated-and-vivid-sunset-with-colorful-orange-yellow-blue-pink-and-purple-clouds-in-the-sky-above-reflecting-on-rain-puddles-in-the-sand-at-montrose-beach-in-chicago-illinois_SGVF1Pag7_thumb.jpg"
-                        class="img-fluid" alt="Avatar">
+                            class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach1">
                             <h3>Montrose Beach</h3>
                         </div>
@@ -92,7 +108,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="http://www.citylightsrentals.com/wp-content/uploads/Neighborhoods/Oak-St-Beach2-500X400.jpg"
-                        class="img-fluid" alt="Avatar">
+                            class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>Oak Street Beach</h3>
                         </div>
@@ -132,7 +148,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://s3-media2.fl.yelpcdn.com/bphoto/DE_U5gd5KFuy-mfPULdAyg/348s.jpg" alt="Avatar"
-                        class="img-fluid" alt="Avatar">
+                            class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>Ohio Street Beach</h3>
                         </div>
@@ -151,7 +167,7 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/20/34/a0/foster-beach-with-edgewater.jpg"
-                        class="img-fluid" alt="Avatar">
+                            class="img-fluid" alt="Avatar">
                         <div class="caption" id="fosterbeach">
                             <h3>Foster Beach</h3>
                         </div>
@@ -163,114 +179,90 @@
                 </div>
             </div>
         </div>
-
-        <!-- BEACH 7---->
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="7" data-beach-name="Osterman">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="https://i.pinimg.com/originals/64/58/9e/64589edff02911c46b5a47a612291cbc.jpg"
-                        class="img-fluid" alt="Avatar">
-                        <div class="caption" id="beach2">
-                            <h3>Hollywood Beach</h3>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <div id="watercond7">Condition of water</div>
-                        <div id="weatherOsterman"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- BEACH 8---->
-        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="8" data-beach-name="63rdStreet">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="img-fluid"
-                            src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://Chicago.simpleviewcrm.com/images/listings/original_5569_63_BH_18.JPG"
-                            class="img-fluid" alt="Avatar">
-                        <div class="caption" id="beach2">
-                            <h3>63rd Street Beach</h3>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <div id="watercond8">Condition of water</div>
-                        <div id="weather63rdStreet"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+    <br><br>
 
-    <!-- SOURCES---->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- <script src="/Assets/js/API.js"></script> -->
-    <script src="/Assets/js/flipcards.js"></script>
-    <script src="/Assets/js/firebase.js"></script>
-    <script src="/app.js"></script>
+    <div class="container">
+
+        <!-- Main contenter Header -->
+        <h2>Hungry?</h2>
+        <h5>Find place to grab a bite near you</h5>
+        <br>
+        <!-- Table/Map Div -->
+        <div class="row center-xs" style="max-width: 100%">
+            <div class="col-xs-12 col-md-6">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Current Temp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr" data-value="Montrose">
+                                <th scope="row">1</th>
+                                <td>Montrose</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Oak Street">
+                                <th scope="row">2</th>
+                                <td>Oak Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="North Avenue">
+                                <th scope="row">3</th>
+                                <td>North Avenue</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="12th Street">
+                                <th scope="row">4</th>
+                                <td>12th Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Ohio Street">
+                                <th scope="row">5</th>
+                                <td>Ohio Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Hollywood">
+                                <th scope="row">6</th>
+                                <td>Hollywood</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Foster">
+                                <th scope="row">7</th>
+                                <td>Foster</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="63rd Street">
+                                <th scope="row">8</th>
+                                <td>63rd Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="map">MAP GOES HERE</div>
+            </div>
+        </div>
+        <!-- SOURCES---->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <!-- <script src="/Assets/js/API.js"></script> -->
+        <script src="/Assets/js/flipcards.js"></script>
+        <script src="/Assets/js/firebase.js"></script>
+        <script src="/app.js"></script>
 </body>
 
 </html>
 
-<!-- Table/Map Div -->
-<!-- <div class="col-4">
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Rank</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Current Temp</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tr" data-value="Montrose">
-                        <th scope="row">1</th>
-                        <td>Montrose</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="Oak Street">
-                        <th scope="row">2</th>
-                        <td>Oak Street</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="North Avenue">
-                        <th scope="row">3</th>
-                        <td>North Avenue</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="12th Street">
-                        <th scope="row">4</th>
-                        <td>12th Street</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="Ohio Street">
-                        <th scope="row">5</th>
-                        <td>Ohio Street</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="Hollywood">
-                        <th scope="row">6</th>
-                        <td>Hollywood</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="Foster">
-                        <th scope="row">7</th>
-                        <td>Foster</td>
-                        <td>API DATA</td>
-                    </tr>
-                    <tr class="tr" data-value="63rd Street">
-                        <th scope="row">8</th>
-                        <td>63rd Street</td>
-                        <td>API DATA</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="map" style="height: 100%; width: 100%"></div>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback=initMap"
-        async defer></script> -->
-<!-- </div>
-    </div> -->
+
+
+<!-- <div id="map" style="height: 100%; width: 100%"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback=initMap" async
+    defer></script>
+</div>
+</div> -->
