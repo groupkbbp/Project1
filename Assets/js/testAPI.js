@@ -1,7 +1,6 @@
 //Array of Beach Objects
 
-var beachIDs = [
-    {
+var beachIDs = [{
         beach: "Oak Street",
         foodQuery: "restaurants%20near%20Oak%20Street%20Beach%2C%20Chicago%2C%20Illinois%2C%20USA",
         beachQuery: "place_id:ChIJQZJQJFfTD4gRajRN4wWCges",
@@ -64,36 +63,33 @@ $(".flip-card").on("click", function () {
     //replace oak street with value from THIS id or value
     for (var i = 0; i < values.length; i++) {
         if (values[i].beach == selection) {
-           
+
             //Find Matching Object Values in Array 
             var foodQueryString = values[i].foodQuery;
             console.log("FQ: " + foodQueryString);
             var locationQueryString = values[i].locationQuery;
             console.log("LQ: " + locationQueryString);
-           
+
             //Google Query String
             var beachWeather = "https://darksky.net/widget/graph-bar/" + locationQueryString + "/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true"
             console.log("BW: " + beachWeather);
-           
+
             //Dark Skies Query String
             var beachMap = "https://www.google.com/maps/embed/v1/search?q=" + foodQueryString + "&key=AIzaSyDQUzAUZX_8MqKnkg5Ejiw-yWaRW3WoP9k"
             console.log("BM: " + beachMap);
-           
+
             //Select Parent Container
             var parent = $(".map");
-            
+
             //Google Map API Add
             var child = $("<iframe>").attr("width", "500").attr("height", "1000").attr("style", "border:0").attr("src", beachMap);
-           
+
             //Dark Skies API Add
             var child2 = $("<iframe>").attr("width", "500").attr("height", "1000").attr("style", "border:0").attr("src", beachWeather);
             //var child2 = $("<script>").attr("width", "500").attr("height", "1000").attr("style", "border:0").attr("src", beachWeather); 
-           
+
             parent.empty();
             parent.append(child);
         }
     }
 })
-
-
-

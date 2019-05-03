@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Kite+One" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css">
@@ -16,20 +17,33 @@
     </script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <link rel="stylesheet" href="Assets/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
-    <!-- flexgrid link -->
+    <!-- Flexgrid -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
         type="text/css">
-    <title>Beaches</title>
+    <!-- Moment-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>BB</title>
     <style>
         .flip-card {
-            width: 100%;
-            margin: 1%;
+            width: 100% !important;
+            overflow: hidden !important;
+            margin-top: 1.5%;
+            margin-bottom: 1.5%;
         }
 
         .img-fluid {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
+            transition-duration: 2s !important;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.2);
+    
         }
     </style>
 </head>
@@ -50,23 +64,24 @@
                 </svg></a>
         </div>
     </div>
-    <!-- Main contenter Header -->
-    <div class="container" id="main-container-header">
-        <h2>Ready to go?</h2>
-        <h5>Select you favorite beach for details.</h5>
-  
-    <ul class="nav nav-pills">
-        <li class="nav-itme">
+    <!-- Primary Section -->
+    <div class="location" id="main-container-header">
+        <br><br>
+        <h2 id="location">Ready to go?</h2>
+        <h5 id="location-cont-1">Lets do it! Click to find the best spot for you. </h5>
+<br>
+        <ul class="nav nav-pills">
+            <li class="nav-itme">
                 <a class="nav-link" href="#">Most Popular</a>
-        </li>
-        <li class="nav-itme">
+            </li>
+            <li class="nav-itme">
                 <a class="nav-link" href="#">Best Conditions</a>
-        </li>
-    </ul>
+            </li>
+        </ul>
     </div>
-    
+
     <!-- BEACH 1---->
-    <div class="row center-xs" style="max-width: 100%">
+    <div class="row center-xs" style="max-width: 100%; margin: 0">
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
             <div class="flip-card" data-toggle="front" data-beach-id="1" data-beach-name="Montrose">
                 <div class="flip-card-inner">
@@ -75,6 +90,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach1">
                             <h3>Montrose Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back" data-toggle="back">
@@ -93,6 +109,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>North Avenue Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back">
@@ -112,6 +129,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>Oak Street Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back">
@@ -132,6 +150,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>12th Street Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back" data-toggle="back">
@@ -152,6 +171,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="beach2">
                             <h3>Ohio Street Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back">
@@ -171,6 +191,7 @@
                             class="img-fluid" alt="Avatar">
                         <div class="caption" id="fosterbeach">
                             <h3>Foster Beach</h3>
+                            <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
                     <div class="flip-card-back">
@@ -182,139 +203,135 @@
         </div>
     </div>
 
-
-    <div class="container-food" id="hero-2">
-        
-        <div id="hero-2-overlay">
-
-            <!-- Main contenter Header -->
-            <h2 id="food">Hungry?</h2>
-            <h5 id="food-cont-1">Find place to grab a bite near you</h5>
-            <br>
-            <!-- Table/Map Div -->
-            <div class="row center-xs" style="max-width: 100%">
-                <div class="col-xs-12 col-md-6">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Rank</th>
-                                    <th scope="col">Location</th>
-                                    <th scope="col">Current Temp</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr" data-value="Montrose">
-                                    <th scope="row">1</th>
-                                    <td>Montrose</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="Oak Street">
-                                    <th scope="row">2</th>
-                                    <td>Oak Street</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="North Avenue">
-                                    <th scope="row">3</th>
-                                    <td>North Avenue</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="12th Street">
-                                    <th scope="row">4</th>
-                                    <td>12th Street</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="Ohio Street">
-                                    <th scope="row">5</th>
-                                    <td>Ohio Street</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="Hollywood">
-                                    <th scope="row">6</th>
-                                    <td>Hollywood</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="Foster">
-                                    <th scope="row">7</th>
-                                    <td>Foster</td>
-                                    <td>API DATA</td>
-                                </tr>
-                                <tr class="tr" data-value="63rd Street">
-                                    <th scope="row">8</th>
-                                    <td>63rd Street</td>
-                                    <td>API DATA</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <!-- Secondary Section -->
+    <div class="food">
+        <br><br>
+        <h2 id="food">Hungry?</h2>
+        <h5 id="food-cont-1" style="margin-bottom: 4%">Find place to grab a bite.</h5>
+        <!-- Table/Map Div -->
+        <div class="row center-xs" style="max-width: 100%; margin: 0">
+            <div class="col-xs-12 col-md-6">
+                <div class="table-responsive" style="width: 100%;height: 100%; overflow: hidden">
+                    <table class="table table-hover" style="margin-bottom:0">
+                        <thead class="thead-dark" style="border: 0;">
+                            <tr>
+                                <th scope="col">Top Spots</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Current Temp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr" data-value="Montrose">
+                                <th scope="row">1</th>
+                                <td>Montrose</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="North Avenue">
+                                <th scope="row">3</th>
+                                <td>North Avenue</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Oak Street">
+                                <th scope="row">2</th>
+                                <td>Oak Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="12th Street">
+                                <th scope="row">4</th>
+                                <td>12th Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Ohio Street">
+                                <th scope="row">5</th>
+                                <td>Ohio Street</td>
+                                <td>API DATA</td>
+                            </tr>
+                            <tr class="tr" data-value="Foster">
+                                <th scope="row">6</th>
+                                <td>Foster</td>
+                                <td>API DATA</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="map">MAP GOES HERE</div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div id="map" style="width: 100%; height: 100%">
+                    <script>
+                        var map;
+
+                        function initMap() {
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: {
+                                    lat: 41.8781,
+                                    lng: -87.6298
+                                },
+                                zoom: 10
+                            });
+                        }
+                    </script>
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback&callback=initMap"
+                        async defer>
+                    </script>
                 </div>
             </div>
         </div>
+    </div>
 
-      
-        <footer>
-               
-                <div class="container-fluid bg-primary py-3">
-               <div class="container">
-                 <div class="row">
-                   <div class="col-md-7">
-                       <div class="row py-0">
-                     <div class="col-sm-1 hidden-md-down">
-                         <a class="bg-circle bg-info" href="#">
-                           <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-                         </a>
-                       </div>
-                       <div class="col-sm-11 text-white">
-                           <div><h4>  Contact</h4>
-                               <p>   <span class="header-font">M</span>y<span class="header-font">w</span>website.com</p>
-                           </div>
-                       </div>
-                       </div>
-                   </div>
-                   <div class="col-md-5">
-                     <div class="d-inline-block">
-                       <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
-                         <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
-                   </a>
-                       </div>
-                       <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
-                         <a href="https://twitter.com/">
-                           <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-                       </div>
-           
-                       <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
-                         <a href="https://www.linkedin.com/company/">
-                           <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-                       </div>
-                       <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
-                         <a href="https://www.google.com/">
-                           <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               </div>
-           </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid bg-primary py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row py-0">
+                            <div class="col-sm-1 hidden-md-down">
+                                <a class="bg-circle bg-info" href="#">
+                                    <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+                                </a>
+                            </div>
+                            <div class="col-sm-11 text-white">
+                                <div>
+                                    <h4>Team 404</h4>
+                                    <p>   <span class="header-font">M</span>y<span
+                                            class="header-font">w</span>https://github.com/groupkbbp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-inline-block">
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
+                                <a href="https://www.facebook.com/"><i
+                                        class="fa fa-2x fa-fw fa-facebook text-white"></i>
+                                </a>
+                            </div>
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
+                                <a href="https://twitter.com/">
+                                    <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+                            </div>
 
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
+                                <a href="https://www.linkedin.com/company/">
+                                    <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+                            </div>
+                            <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
+                                <a href="https://www.google.com/">
+                                    <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- SOURCES---->
-        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-        <!-- <script src="/Assets/js/API.js"></script> -->
-        <script src="/Assets/js/flipcards.js"></script>
-        <script src="/Assets/js/firebase.js"></script>
-        <script src="/app.js"></script>
+    <!-- SOURCES---->
+    <script src="/Assets/js/API.js"></script>
+    <script src="/Assets/js/flipcards.js"></script>
+    <script src="/Assets/js/firebase.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>
-
-
-
-<!-- <div id="map" style="height: 100%; width: 100%"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback=initMap" async
-    defer></script>
-</div>
-</div> -->
