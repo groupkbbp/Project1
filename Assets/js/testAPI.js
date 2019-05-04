@@ -1,5 +1,11 @@
 //Array of Beach Objects
 
+
+
+
+
+
+
 var beachIDs = [{
         beach: "Oak Street",
         foodQuery: "restaurants%20near%20Oak%20Street%20Beach%2C%20Chicago%2C%20Illinois%2C%20USA",

@@ -18,7 +18,8 @@
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <link rel="stylesheet" href="Assets/style.css">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
     <!-- Flexgrid -->
@@ -43,7 +44,7 @@
 
         .img-fluid:hover {
             transform: scale(1.2);
-    
+
         }
     </style>
 </head>
@@ -69,7 +70,7 @@
         <br><br>
         <h2 id="location">Ready to go?</h2>
         <h5 id="location-cont-1">Lets do it! Click to find the best spot for you. </h5>
-<br>
+        <br>
         <ul class="nav nav-pills">
             <li class="nav-itme">
                 <a class="nav-link" href="#">Most Popular</a>
@@ -93,7 +94,7 @@
                             <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
-                    <div class="flip-card-back" data-toggle="back">
+                    <div class="flip-card-back">
                         <div id="watercond1">Condition of water</div>
                         <div id="weatherMontrose"></div>
                     </div>
@@ -102,7 +103,7 @@
         </div>
         <!-- BEACH 2---->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="2" data-beach-name="NorthAve">
+            <div class="flip-card" data-toggle="front" data-beach-id="2" data-beach-name="NorthAve">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://windycitybeaches.weebly.com/uploads/7/0/8/1/7081676/3185026_orig.jpg"
@@ -122,7 +123,7 @@
 
         <!-- BEACH 3---->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="3" data-beach-name="OakStreet">
+            <div class="flip-card" data-toggle="front" data-beach-id="3" data-beach-name="OakStreet">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="http://www.citylightsrentals.com/wp-content/uploads/Neighborhoods/Oak-St-Beach2-500X400.jpg"
@@ -153,7 +154,7 @@
                             <i class=" icon far fa-eye"></i>
                         </div>
                     </div>
-                    <div class="flip-card-back" data-toggle="back">
+                    <div class="flip-card-back">
                         <div id="watercond4">Condition of water</div>
                         <div id="weather12thStreet"></div>
 
@@ -164,7 +165,7 @@
 
         <!-- BEACH 5---->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="5" data-beach-name="Ohio">
+            <div class="flip-card" data-toggle="front" data-beach-id="5" data-beach-name="Ohio">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://s3-media2.fl.yelpcdn.com/bphoto/DE_U5gd5KFuy-mfPULdAyg/348s.jpg" alt="Avatar"
@@ -184,7 +185,7 @@
 
         <!-- BEACH 6---->
         <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="flip-card" data-beach-id="6" data-beach-name="Foster">
+            <div class="flip-card" data-toggle="front" data-beach-id="6" data-beach-name="Foster">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/20/34/a0/foster-beach-with-edgewater.jpg"
@@ -208,7 +209,7 @@
         <br><br>
         <h2 id="food">Hungry?</h2>
         <h5 id="food-cont-1" style="margin-bottom: 4%">Find place to grab a bite.</h5>
-        <!-- Table/Map Div -->
+        <!-- Table Div -->
         <div class="row center-xs" style="max-width: 100%; margin: 0">
             <div class="col-xs-12 col-md-6">
                 <div class="table-responsive" style="width: 100%;height: 100%; overflow: hidden">
@@ -226,22 +227,22 @@
                                 <td>Montrose</td>
                                 <td>API DATA</td>
                             </tr>
-                            <tr class="tr" data-value="North Avenue">
+                            <tr class="tr" data-value="NorthAve">
                                 <th scope="row">3</th>
                                 <td>North Avenue</td>
                                 <td>API DATA</td>
                             </tr>
-                            <tr class="tr" data-value="Oak Street">
+                            <tr class="tr" data-value="OakStreet">
                                 <th scope="row">2</th>
                                 <td>Oak Street</td>
                                 <td>API DATA</td>
                             </tr>
-                            <tr class="tr" data-value="12th Street">
+                            <tr class="tr" data-value="12thStreet">
                                 <th scope="row">4</th>
                                 <td>12th Street</td>
                                 <td>API DATA</td>
                             </tr>
-                            <tr class="tr" data-value="Ohio Street">
+                            <tr class="tr" data-value="Ohio">
                                 <th scope="row">5</th>
                                 <td>Ohio Street</td>
                                 <td>API DATA</td>
@@ -255,25 +256,23 @@
                     </table>
                 </div>
             </div>
+            <!-- Table Div -->
             <div class="col-xs-12 col-md-6">
                 <div id="map" style="width: 100%; height: 100%">
+                    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A">
+                    </script>
                     <script>
-                        var map;
-
-                        function initMap() {
-                            map = new google.maps.Map(document.getElementById('map'), {
-                                center: {
-                                    lat: 41.8781,
-                                    lng: -87.6298
-                                },
-                                zoom: 10
-                            });
-                        }
-                    </script>
-                    <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback&callback=initMap"
-                        async defer>
-                    </script>
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: {
+                                lat: 41.8781,
+                                lng: -87.6298
+                            },
+                            zoom: 10,
+                            disableDefaultUI: true,
+                            zoomControl: true,
+                            streetViewControl: true
+                        });
+                    </script> -->
                 </div>
             </div>
         </div>

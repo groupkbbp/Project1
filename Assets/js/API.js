@@ -26,7 +26,6 @@ var beachIDs = [{
         latQuery: "41.9141994",
         lonQuery: "-87.6244975"
     },
-
     {
         dataBeachName: "12thStreet",
         beach: "12th Street Beach",
@@ -75,66 +74,73 @@ var beachIDs = [{
     }
 ];
 
-// var map;
-//     function initMap() {
-//         map = new google.maps.Map(document.getElementById('map'), {
-//             center: { lat: 41.9019772, lng: -87.6222749 },
-//             zoom: 15
-//         });
-//     };
-
-
+//On click Event (Toggle)
 $(".flip-card").on("click", function () {
-
-    var currentBeach = $(this).attr("data-beach-name");
-
-    //Loop through Array
-    var values = Object.values(beachIDs);
-    console.log(values);
-
-    //get lat lon for dark sky api
-    for (i = 0; i < values.length; i++) {
-        if (values[i].dataBeachName == currentBeach) {
-
-            var locationQueryString = values[i].locationQuery;
-            console.log(locationQueryString);
-            var queryURL = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/4a4040a2a6849005fa4c1146c74f1d8f/" + locationQueryString;
-            //Dark Sky API Call with Selected Beach
-
+    console.log($(this).attr("data-toggle"));
+    //validates which side of the card is clicked 
+    if ($(this).attr("data-toggle") == "front") {
+        //Get card Selection
+        var currentBeach = $(this).attr("data-beach-name");
+        //Var for Array to Loop through
+        var values = Object.values(beachIDs);
+        console.log(values);
+        //Toggles flip card status
+        $(this).attr("data-toggle", "back");
+        //Loops through Array --- Matches Button with beach location details --- sets location var for API call -- Calls API fucntion
+        for (i = 0; i < values.length; i++) {
+            if (values[i].dataBeachName == currentBeach) {
+                var locationQueryString = values[i].locationQuery;
+                console.log(locationQueryString);
+                var queryURL = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/4a4040a2a6849005fa4c1146c74f1d8f/" + locationQueryString;
+                //Dark Sky API Call with Selected Beach
+                darkSkyCall();
+            }
+        };
+        //Makes API call --- updates back of flip card with current data
+        function darkSkyCall() {
             $.ajax({
                     url: queryURL,
                     method: "GET",
                 })
                 .then(function (response) {
                     console.log(response);
-                    var results = response;
-                    console.log("test" + results.currently.apparentTemperature)
-                    $("#weather" + currentBeach).text(results.currently.apparentTemperature);
-                })
+                    console.log(response.currently.apparentTemperature)
+                    var today = response.daily
+                    var parent = $("#weather" + currentBeach)
+                    var day = $("<div>").text("Friday");
+                    var sunRise = $("<div>").text(today.data[0].sunriseTime);
+                    var sunSet = $("<div>").text(today.data[0].sunsetTime);
+                    var icon = $("<div>").text(today.data[0].icon);
+                    var temp = $("<div>").text(response.currently.apparentTemperature + "°");
+                    var highTemp = $("<div>").text("Hi " + today.data[0].apparentTemperatureHigh + "°");
+                    var lowTemp = $("<div>").text("Lo " + today.data[0].apparentTemperatureLow + "°");
+                    var humidity = $("<div>").text("Humidity " + (today.data[0].humidity * 100) + "%");
+                    var summary = $("<div>").text(today.data[0].summary);
+                    parent.append(day, sunRise, sunset, icon, temp, highTemp, lowTemp, humidity, summary)
 
-        } else {
-            return
+                })
         }
-    }
+        //if back of the card is click clear div and do not make new API call 
+    } else {
+        $(this).attr("data-toggle", "front")
+        $("#weather" + $(this).attr("data-beach-name")).empty();
+    };
 });
 
-// var map;
-//         function initMap() {
-//             map = new google.maps.Map(document.getElementById('map'), {
-//                 center: { lat: 41.9019772, lng: -87.6222749 },
-//                 zoom: 15
-//             });
-//         };
-
-// .done(function(data) {
-//     setTimeout(() => {
-//       $('.status').text(JSON.stringify(data));
-//     }, 2000);
-//     console.log('success callback 1', data)
-//   })
-//   .fail(function(xhr) {
-//     console.log('error callback 1', xhr);
-//   });
-// }
-
-// getData();
+// Google iframe update on Click 
+$('body').on('click', '.tr', function () {
+            var beachLocation = $(this).attr("data-value");
+            console.log(beachLocation)
+            var values = Object.values(beachIDs);
+            for (i = 0; i < values.length; i++) {
+                if (values[i].dataBeachName == beachLocation) {
+                    var foodQueryString = values[i].foodQuery;
+                    console.log(foodQueryString);
+                    var googleMap = "https://www.google.com/maps/embed/v1/search?q=" + foodQueryString + "&key=AIzaSyDQUzAUZX_8MqKnkg5Ejiw-yWaRW3WoP9k"
+                    var map = $("#map");
+                    map.empty();
+                    var beachMap = $("<iframe>").attr("style", "border:0; width: 100%; height: 100%").attr("src", googleMap);
+                    map.append(beachMap);
+                }
+            }
+                });

@@ -11,19 +11,32 @@
     <title>API Test Page</title>
 </head>
 
-<body>
-  
-        <div class="row">
-                <div class="col-xs">
-                    <div class="box">
-                        <div class="row">
-                            <div class="col-xs">
-                                <div class="box">auto</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body style="background-color:azure">
+        <canvas id="icon1" width="128" height="128">Icon1</canvas>
+        <canvas id="icon2" width="128" height="128">Icone2</canvas>
+        
+        <script>
+          var skycons = new Skycons({"color": "pink"});
+          skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+        
+     
+        
+          // if you're using the Forecast API, you can also supply
+          // strings: "partly-cloudy-day" or "rain".
+        
+          // start animation!
+          skycons.play();
+        
+          // you can also halt animation with skycons.pause()
+        
+          // want to change the icon? no problem:
+          skycons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
+        
+          // want to remove one altogether? no problem:
+        //   skycons.remove("icon2");
+        </script>
+
+    
     <!-- sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/Assets/js/weatherAPI.js"></script>
