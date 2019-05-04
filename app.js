@@ -44,7 +44,7 @@ $('.flip-card').on('click', function () {
   var beachId = $(this).attr('data-beach-id');
   //console.log('beachId', beachId)
   //console.log('beachName: ', beachName);
-  var test_date = "date=2016-06-04";
+  var test_date = "date=2016-06-10";
   //https://data.cityofchicago.org/resource/t62e-8nvc.json?date=2016-06-04T00:00:00.000
   var now = moment().format('YYYY-MM-DD');
   var date = 'date=' + now

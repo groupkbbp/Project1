@@ -57,7 +57,7 @@ var beachIDs = [{
     {
         dataBeachName: "Foster",
         beach: "Foster",
-        foodQuery: "restaurants%20near%20Foster%20Beach%2C%20Chicago%2C%20Illinois%2C%20USA",
+        foodQuery: "restaurants%20near%20Foster%20Beach%2C%20Illinois%2C%20USA",
         beachQuery: "place_id:ChIJt9K2mXzRD4gRn6RCpGid0n0",
         locationQuery: "41.9800,-87.6499",
         latQuery: "",
@@ -108,15 +108,15 @@ $(".flip-card").on("click", function () {
                     var today = response.daily
                     var parent = $("#weather" + currentBeach)
                     var day = $("<div>").text("Friday");
-                    var sunRise = $("<div>").text(today.data[0].sunriseTime);
-                    var sunSet = $("<div>").text(today.data[0].sunsetTime);
+                    var sunRise = $("<div>").text("Sunrise " +moment.unix(today.data[0].sunriseTime).format("LT"));
+                    var sunSet = $("<div>").text("Sunset " + moment.unix(today.data[0].sunsetTime).format("LT"));
                     var icon = $("<div>").text(today.data[0].icon);
                     var temp = $("<div>").text(response.currently.apparentTemperature + "°");
                     var highTemp = $("<div>").text("Hi " + today.data[0].apparentTemperatureHigh + "°");
                     var lowTemp = $("<div>").text("Lo " + today.data[0].apparentTemperatureLow + "°");
                     var humidity = $("<div>").text("Humidity " + (today.data[0].humidity * 100) + "%");
                     var summary = $("<div>").text(today.data[0].summary);
-                    parent.append(day, sunRise, sunset, icon, temp, highTemp, lowTemp, humidity, summary)
+                    parent.append(day,sunRise,sunSet, icon, temp, highTemp, lowTemp, humidity, summary)
 
                 })
         }
