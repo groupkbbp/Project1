@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+
+    <title>API Test Page</title>
+    <style>
+        html, body {
+          height: 100%;
+        }
+      </style>
+</head>
+
+<body>
+
+
+        <canvas id="icon1" width="128" height="128"></canvas>
+        <canvas id="icon2" width="128" height="128"></canvas>
+    <div class="input-group mb-3">
+        <select id="beachSelect">
+            <option selected>Choose Beach...</option>
+            <option id="Oak Street">Oak Street</option>
+            <option id="North Ave">North Ave</option>
+            <option id="Montrose">Montrose</option>
+            <option id="12th Street">12th Street</option>
+            <option id="Ohio Street">Ohio Street</option>
+            <option id="Foster">Foster</option>
+            <option id="Hollywood">Hollywood</option>
+            <option id="63rd Street">63rd Street</option>
+        </select>
+    </div>
+
+    <button id="submit">send</button>
+    <div id="beachDisplay"></div>
+
+    <!-- Parent Div -->
+    <div class="parent"></div>
+
+    <!-- Map Div -->
+    <div id="map" style="height: 50%; width: 50%"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback=initMap"
+        async defer></script>
+
+    <!-- sources -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/Assets/js/testAPI.js"></script>
+
+</body>
+
+</html>

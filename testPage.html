@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- flex CSS -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <title>API Test Page</title>
+</head>
+
+<body style="background-color:azure">
+        <canvas id="icon1" width="128" height="128">Icon1</canvas>
+        <canvas id="icon2" width="128" height="128">Icone2</canvas>
+        
+        <script>
+          var skycons = new Skycons({"color": "pink"});
+          skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+        
+     
+        
+          // if you're using the Forecast API, you can also supply
+          // strings: "partly-cloudy-day" or "rain".
+        
+          // start animation!
+          skycons.play();
+        
+          // you can also halt animation with skycons.pause()
+        
+          // want to change the icon? no problem:
+          skycons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
+        
+          // want to remove one altogether? no problem:
+        //   skycons.remove("icon2");
+        </script>
+
+    
+    <!-- sources -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/Assets/js/weatherAPI.js"></script>
+
+</body>
+
+</html>

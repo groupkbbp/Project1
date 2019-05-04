@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Kite+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  <link rel="stylesheet" href="Assets/style.css">
+  <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+
+  <!--<link rel ="stylesheet" href="Assets/style.scss">--->
+  <title>Beaches</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="hero-full-screen">
+    <div class="top-content-section"> </div>
+    <div class="middle-content-section">
+      <h1>Basic Beaches</h1>
+      <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+    </div>
+    <div class="bottom-content-section" data-magellan data-threshold="0">
+      <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24">
+          <path
+            d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
+        </svg></a>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="main-content-section" data-magellan-target="main-content-section" style="width:100%">
+
+    <!-- BEACH 1---->
+    <div class="row w-100" style="max-width:100rem">
+      <div class="col-4">
+        <div class="flip-card" data-toggle="front" data-beach-id="1" data-beach-name="Montrose">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/HWdNSxjEzjch3hjal/storyblocks-beautiful-bright-saturated-and-vivid-sunset-with-colorful-orange-yellow-blue-pink-and-purple-clouds-in-the-sky-above-reflecting-on-rain-puddles-in-the-sand-at-montrose-beach-in-chicago-illinois_SGVF1Pag7_thumb.jpg"
+                alt="Avatar" style="width:400px;height:400px;">
+              <div class="caption" id="beach1">
+                <h3>Montrose Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back" data-toggle="back">
+              <div id="watercond1">Condition of water</div>
+              <div id="weatherMontrose"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEACH 2---->
+        <div class="flip-card" data-beach-id="2" data-beach-name="NorthAve">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://windycitybeaches.weebly.com/uploads/7/0/8/1/7081676/3185026_orig.jpg" class="img-fluid"
+                alt="Avatar" style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>North Avenue Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond2">Condition of water</div>
+              <div id="weatherNorthAve"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEACH 3---->
+      <div class="col-4">
+        <div class="flip-card" data-beach-id="3" data-beach-name="OakStreet">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="http://www.citylightsrentals.com/wp-content/uploads/Neighborhoods/Oak-St-Beach2-500X400.jpg"
+                alt="Avatar" style="width:400px;height:400px;">
+              <div class="caption" id="beach2">
+                <h3>Oak Street Beach</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div id="watercond3">Condition of water</div>
+              <div id="weatherOakStreet"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BEACH 4---->
+      <div class="flip-card" data-toggle="front" data-beach-id="4" data-beach-name="12thStreet">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="img-fluid"
+              src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://Chicago.simpleviewcrm.com/images/listings/original_12th-St-Beach.jpg"
+              alt="Avatar" style="width:400px;height:400px;">
+            <div class="caption" id="beach2">
+              <h3>12th Street Beach</h3>
+            </div>
+          </div>
+          <div class="flip-card-back" data-toggle="back">
+            <div id="watercond4">Condition of water</div>
+            <div class="weather" id="weather-12" value="beach-conditions" style="width:400px;height:100px;">
+              <script id="tester" type='text/javascript'
+                src='https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'>
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Table/Map Div -->
+    <div class="col-4">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Location</th>
+              <th scope="col">Current Temp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tr" data-value="Montrose">
+              <th scope="row">1</th>
+              <td>Montrose</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="Oak Street">
+              <th scope="row">2</th>
+              <td>Oak Street</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="North Avenue">
+              <th scope="row">3</th>
+              <td>North Avenue</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="12th Street">
+              <th scope="row">4</th>
+              <td>12th Street</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="Ohio Street">
+              <th scope="row">5</th>
+              <td>Ohio Street</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="Hollywood">
+              <th scope="row">6</th>
+              <td>Hollywood</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="Foster">
+              <th scope="row">7</th>
+              <td>Foster</td>
+              <td>API DATA</td>
+            </tr>
+            <tr class="tr" data-value="63rd Street">
+              <th scope="row">8</th>
+              <td>63rd Street</td>
+              <td>API DATA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="map" style="height: 100%; width: 100%"></div>
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3hlgmbtMv17fKGQUCwDxzrzZWfChi25A&callback=initMap"
+        async defer></script> -->
+    </div>
+  </div>
+
+  <!--This is the second row-->
+  <!-- BEACH 5---->
+  <div class="row w-100" style="max-width:100rem">
+    <div class="col-4">
+      <div class="flip-card" data-beach-id="5" data-beach-name="Ohio">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://s3-media2.fl.yelpcdn.com/bphoto/DE_U5gd5KFuy-mfPULdAyg/348s.jpg" alt="Avatar"
+              style="width:400px;height:400px;">
+            <div class="caption" id="beach2">
+              <h3>Ohio Street Beach</h3>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="watercond5">Condition of water</div>
+            <div class="weather" id="weather-ohio-street" value="beach-conditions" style="width:400px;height:100px;">
+              <script type='text/javascript'
+                src='https://darksky.net/widget/graph-bar/41.9636,-87.7476/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'>
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEACH 6---->
+      <div class="flip-card" data-beach-id="6" data-beach-name="Foster">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/20/34/a0/foster-beach-with-edgewater.jpg"
+              class="img-fluid" alt="Avatar" style="width:400px;height:400px;">
+            <div class="caption" id="fosterbeach">
+              <h3>Foster Beach</h3>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="watercond6">Condition of water</div>
+            <div class="weather" id="weather-foster" value="beach-conditions" style="width:400px;height:100px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEACH 2---->
+    <div class="col-4">
+      <div class="flip-card" data-beach-id="7" data-beach-name="Osterman">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://i.pinimg.com/originals/64/58/9e/64589edff02911c46b5a47a612291cbc.jpg" alt="Avatar"
+              style="width:400px;height:400px;">
+            <div class="caption" id="beach2">
+              <h3>Hollywood Beach</h3>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="watercond7">Condition of water</div>
+            <div class="weather" id="weather-oak" value="OakStreet" style="width:400px;height:100px;">
+              <script type='text/javascript'
+                src='https://darksky.net/widget/graph-bar/41.9029,-87.6227/us12/en.js?width=100%&height=400&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'>
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEACH 2---->
+      <div class="flip-card" data-beach-id="8" data-beach-name="63rdStreet">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img class="img-fluid"
+              src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://Chicago.simpleviewcrm.com/images/listings/original_5569_63_BH_18.JPG"
+              alt="Avatar" style="width:400px;height:400px;">
+            <div class="caption" id="beach2">
+              <h3>63rd Street Beach</h3>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="watercond8">Condition of water</div>
+            <div class="weather" id="weather-8" value="beach-conditions" style="width:400px;height:100px;">
+              <script id="tester" type='text/javascript'
+                src='https://darksky.net/widget/graph-bar/41.8637,-87.6075/us12/en.js?width=100%&height=400&title=FullForecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true'>
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCES---->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="/Assets/js/API.js"></script>
+  <script src="/Assets/js/flipcards.js"></script>
+  <script src="/Assets/js/firebase.js"></script>
+  <script src="/app.js"></script>
+</body>
+
+</html>
