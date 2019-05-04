@@ -107,7 +107,7 @@ $(".flip-card").on("click", function () {
                     console.log(response.currently.apparentTemperature)
                     var today = response.daily
                     var parent = $("#weather" + currentBeach)
-                    var day = $("<div>").text("Friday");
+                    var day = $("<div>").text("Saturday");
                     var sunRise = $("<div>").text("Sunrise " +moment.unix(today.data[0].sunriseTime).format("LT"));
                     var sunSet = $("<div>").text("Sunset " + moment.unix(today.data[0].sunsetTime).format("LT"));
                     var icon = $("<div>").text(today.data[0].icon);
